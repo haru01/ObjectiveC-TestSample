@@ -1,5 +1,8 @@
 #import "ObjectiveC_TestSampleTests.h"
 
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+
 @implementation ObjectiveC_TestSampleTests
 
 - (void)setUp
@@ -16,9 +19,9 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testAssertThat
 {
-    STFail(@"Unit tests are not implemented yet in ObjectiveC-TestSampleTests");
+    assertThat(@(1+1), equalTo(@2));
 }
 
 @end
